@@ -33,3 +33,16 @@ delete entries (key, value pairs) from the dictionary.
 get the entire dictionary printed to the screen.
 Lesson 6.01 did not cover all the techniques for manipulating dictionaries that you will need to program these features. Search for the necessary information in the [Python tutorial about dictionaries][1] and the [advanced Python documentation about dictionaries][2].
 '''
+my_dictionary = {
+'btw': 'by the way',
+'omg': 'oh my gosh',
+'wdym': 'what do you mean',
+'omw': 'on my way',
+'eta': 'estimated time of arrival',
+'bc': 'beacuse',
+'lol': 'laugh out loud',
+'brb':'be right back',
+}
+
+choice = input("What would you like to know the abreviation for? [btw, omg, wdym, omw, eta, bc, idk, brb, lol]>")
+print(f"{choice} means {my_dictionary[choice]}")
