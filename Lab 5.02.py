@@ -38,13 +38,25 @@ from the Standard to Duane Reade. Ariana Grande was walking rather quickly becau
 New York for a few months. All of a sudden a slimy donut appeared out of nowhere. Ariana Grande decided 
 to prance foolishly instead of dealing with the situation. Thrown off from Duane Reade Ariana Grande 
 decides to go to Times Square instead. What a beautiful day in New York."
-​
+
 #make all letters lowercase
 example_paragraph_lower = example_paragraph.lower()
-​
+
 #remove all periods
 example_paragraph_lower_no_punctuation = example_paragraph_lower.replace(".", "")
-​
+
 #convert paragraph into a list of individual strings
 example_word_list = example_paragraph_lower_no_punctuation.split(" ")
 '''
+my_paragraph = "Dogs can be very good pets. In my opinion dogs are superior to cats. The reason being because dogs do more than just sit around.\n I would prefer to have a pet that does more than just be there for emotional support. Dogs can help do things for you and be a medical aid if you need them to be.\n Dogs also have the energy to play more than cats which makes it better to have dogs around than cats. Its a little biased but I like dogs more than cats."
+
+#make all letters lowercase
+my_paragraph_lower = my_paragraph.lower()
+
+#remove all periods
+my_paragraph_lower_no_punctuation = my_paragraph_lower.replace(".", "")
+pass
+
+#convert paragraph into a list of individual strings
+word_list = my_paragraph_lower_no_punctuation.split(" ")
+pass
