@@ -31,7 +31,7 @@ What word would you like to know the frequency of? dogs
 split, replace, and lower
 --------------------------
 This is the code to lower case the letters in the paragraph, remove the periods, and split them into 
-individual words.
+individual  words.
 
 example_paragraph = "It was a beautiful day in New York City. Our hero Ariana Grande was on a walk 
 from the Standard to Duane Reade. Ariana Grande was walking rather quickly because she had lived in 
@@ -79,10 +79,10 @@ for word in word_list:
     else:
         my_paragraph_dict[word] = 1
 
-
+#game loop
 while True:
 
-    user_choice = input("What word would you like to know the frequency of?>")
+    user_choice = input("What word would you like to know the frequency of in the paragraph?>")
 
     if word in my_paragraph_dict:
         print(f"The word '{user_choice}' appears {my_paragraph_dict[user_choice]} time(s) in the paragraph.")
@@ -90,3 +90,10 @@ while True:
         break
     else:
         print(f"The word '{user_choice}' is not used in this paragraph.")
+
+
+
+
+
+
+
