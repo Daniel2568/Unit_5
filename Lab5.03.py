@@ -43,3 +43,14 @@ Use split() to allow the user to input add Friday watch tv and relax.  Create a 
 that doesn't allow any duplicates across any of the days. Make sure when you add a to-do item that it 
 doesn't exist in the to-do lists of any of the days before adding.
 '''
+
+Week_long_to_do_list = 
+
+
+
+
+
+user_choice = input("What would you like to do to the 'to do list' ('add' or 'get')")
+
+if user_choice == 'add':
+    print("What day of the week would you like to add something to? ('M', 'T', 'W', 'R', 'F', 'S', 'S')")
