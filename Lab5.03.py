@@ -44,13 +44,39 @@ that doesn't allow any duplicates across any of the days. Make sure when you add
 doesn't exist in the to-do lists of any of the days before adding.
 '''
 
-Week_long_to_do_list = 
+def add():
+    day_choice = input("What day would you like to add a task to?> ")
+    task_choice = input(f"What task would you like to do on {day_choice}?> ")
+
+    if day_choice in Week_long_to_do_list:
+        if task_choice in Week_long_to_do_list[day_choice]:
+            print(f"{task_choice} is already scheduled to do that day.")
+        else:
+            Week_long_to_do_list[day_choice].append(task_choice)
+    else:
+        Week_long_to_do_list[day_choice] = [task_choice]
+
+def get():
+    day__choice = input("What day do you want to see the tasks for?> ")
+    
+    if day__choice in Week_long_to_do_list:
+        Week_long_to_do_list[day__choice]
+    else:
+        print(f"You dont currently have anything to do on {day__choice}?> ")
+
+Week_long_to_do_list = {}
+print(Week_long_to_do_list)
 
 
 
 
+while True:
+    user_choice = input("What would you like to do to the 'to do list' ('add' or 'get')")
 
-user_choice = input("What would you like to do to the 'to do list' ('add' or 'get')")
+    if user_choice == 'add':
+        add()
+    
+    if user_choice == 'get':
+        get()
 
-if user_choice == 'add':
-    print("What day of the week would you like to add something to? ('M', 'T', 'W', 'R', 'F', 'S', 'S')")
+    print(Week_long_to_do_list)
