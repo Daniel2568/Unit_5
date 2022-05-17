@@ -36,7 +36,7 @@ my_dictionary = {
 'kittens': 'cute animals',
 'puppies': 'baby dogs'
 }
-​
+
 my_dictionary.pop('kittens')
 print(my_dictionary)
 my_dictionary.pop('bunnies')
@@ -46,3 +46,12 @@ Write down what the second line does.
 
 What is different between my_dictionary.pop('bunnies') and my_dictionary.pop('bunnies', None)?
 '''
+my_dictionary = {
+'kittens': 'cute animals',
+'puppies': 'baby dogs'
+}
+
+my_dictionary.pop('kittens')
+print(my_dictionary)
+my_dictionary.pop('bunnies')
+my_dictionary.pop('bunnies', None)
