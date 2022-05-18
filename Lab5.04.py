@@ -35,25 +35,25 @@ Here's an example of the program output with the text passage set to the opening
 Seuss's poem Green Eggs and Ham:
 
 I am Sam. I am Sam. Sam-I-am.
-​
+
 That Sam-I-am! That Sam-I-am!
 I do not like that Sam-I-am!
-​
+
 Would you like green eggs and ham?
-​
+
 I do not like them, Sam-I-am.
 I do not like green eggs and ham.
-​
+
 Would you like them here or there?
-​
+
 I would not like them here or there.
 I would not like them anywhere.
 I do not like green eggs and ham.
 I do not like them, Sam-I-am.
-​
+
 Would you like them in a house?
 Would you like them with a mouse?
-​
+
 I do not like them in a house.
 I do not like them with a mouse.
 I do not like them here or there.
@@ -75,3 +75,45 @@ most frequent to least frequent.
 
 Change the code to find the least frequent words.
 '''
+
+Dr_Sus_paragraph = '''
+    I am Sam. I am Sam. Sam-I-am.
+
+    That Sam-I-am! That Sam-I-am!
+    I do not like that Sam-I-am!
+
+    Would you like green eggs and ham?
+
+    I do not like them, Sam-I-am.
+    I do not like green eggs and ham.
+
+    Would you like them here or there?
+
+    I would not like them here or there.
+    I would not like them anywhere.
+    I do not like green eggs and ham.
+    I do not like them, Sam-I-am.
+
+    Would you like them in a house?
+    Would you like them with a mouse?
+
+    I do not like them in a house.
+    I do not like them with a mouse.
+    I do not like them here or there.
+    I do not like them anywhere.
+    I do not like green eggs and ham.
+    I do not like them, Sam-I-am.
+'''
+
+
+#change to lower case letters
+Dr_Sus_paragraph_lower = Dr_Sus_paragraph.lower()
+#list
+Dr_Sus_paragraph_convert_to_list = Dr_Sus_paragraph.replace("."," ")
+
+print(Dr_Sus_paragraph)
+
+
+
+
+
