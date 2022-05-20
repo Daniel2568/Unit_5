@@ -76,44 +76,68 @@ most frequent to least frequent.
 Change the code to find the least frequent words.
 '''
 
-Dr_Sus_paragraph = '''
-    I am Sam. I am Sam. Sam-I-am.
-
-    That Sam-I-am! That Sam-I-am!
-    I do not like that Sam-I-am!
-
-    Would you like green eggs and ham?
-
-    I do not like them, Sam-I-am.
-    I do not like green eggs and ham.
-
-    Would you like them here or there?
-
-    I would not like them here or there.
-    I would not like them anywhere.
-    I do not like green eggs and ham.
-    I do not like them, Sam-I-am.
-
-    Would you like them in a house?
-    Would you like them with a mouse?
-
-    I do not like them in a house.
-    I do not like them with a mouse.
-    I do not like them here or there.
-    I do not like them anywhere.
-    I do not like green eggs and ham.
-    I do not like them, Sam-I-am.
-'''
+from functools import _make_key
 
 
-#change to lower case letters
-Dr_Sus_paragraph_lower = Dr_Sus_paragraph.lower()
-#list
-Dr_Sus_paragraph_convert_to_list = Dr_Sus_paragraph.replace("."," ")
-
-print(Dr_Sus_paragraph)
+Dr_Sus_paragraph = '''I am Sam. I am Sam. Sam-I-am.
+That Sam-I-am! That Sam I am!
+I do not like that Sam I am!
+Would you like green eggs and ham?
+I do not like them, Sam I am.
+I do not like green eggs and ham.
+Would you like them here or there?
+I would not like them here or there.
+I would not like them anywhere.
+I do not like green eggs and ham.
+I do not like them, Sam I am.
+Would you like them in a house?
+Would you like them with a mouse?
+I do not like them in a house.
+I do not like them with a mouse.
+I do not like them here or there.
+I do not like them anywhere.
+I do not like green eggs and ham.
+I do not like them, Sam I am.'''
 
 
 
+def text_to_word_list(passage):
+    #make all letters lowercase
+    my_paragraph_lower = passage.lower()
 
+    #remove all periods
+    my_paragraph_lower_no_punctuation = my_paragraph_lower.replace("!", "")
+    my_paragraph_lower_no_punctuation = my_paragraph_lower_no_punctuation.replace(",", "")
+    my_paragraph_lower_no_punctuation = my_paragraph_lower_no_punctuation.replace("-", " ")
 
+    my_paragraph_lower_no_punctuation = my_paragraph_lower_no_punctuation.replace("?", "")
+    my_paragraph_lower_no_punctuation = my_paragraph_lower_no_punctuation.replace(".", "")
+
+    my_paragraph_lower_no_punctuation = my_paragraph_lower_no_punctuation.replace("\n", " ")
+
+    #convert paragraph into a list of individual strings
+    word_list = my_paragraph_lower_no_punctuation.split(" ")
+
+    return word_list
+
+def count_frequencies(word_list):
+    for word in word_list:
+        if word in Dr_Sus_paragraph_dict:
+            Dr_Sus_paragraph_dict[word] += 1
+        else:
+            Dr_Sus_paragraph_dict[word] = 1
+
+Dr_Sus_paragraph_dict = {}
+
+def find_max_valued_key(Dr_Sus_paragraph_dict):
+    max_key = -1
+    for key in Dr_Sus_paragraph_dict:
+        if Dr_Sus_paragraph_dict[key] > max_key:
+            max_key = Dr_Sus_paragraph_dict[key]
+
+    return max_key
+
+list_of_words = text_to_word_list(Dr_Sus_paragraph)
+count_frequencies(list_of_words)
+print(Dr_Sus_paragraph_dict)
+print(find_max_valued_key(Dr_Sus_paragraph_dict))
